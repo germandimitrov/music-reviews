@@ -1,0 +1,23 @@
+---
+layout: main
+title: Reviews
+permalink: /reviews/
+---
+
+<div class="site-reviews">
+    {% for category in site.categories %}
+        {%if category[0] == "reviews"  %}
+            {% for post in category[1] %}
+                <div class="review-image-container">
+                    <span class="review-score">
+                        <span>{{post.score}}</span>
+                    </span>
+                    <a href="{{ site.baseurl }}{{ post.url }}">
+                        <img src="{{ post.imageurl }}" alt="a" />
+                        <p>{{ post.title }}</p>
+                    </a>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+</div>

@@ -1,0 +1,26 @@
+title: Music Blog Review
+description: Music Reviews!
+destination: docs
+baseurl: "/music-blog-reviews" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  UmberLupus
+permalink:
+
+# Build settings
+plugins:
+  - jekyll-feed
+
+exclude:
+  - docs
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.json
+  - package-lock.json
+  - gulpfile.js
+  - theme-personal

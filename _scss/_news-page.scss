@@ -1,0 +1,33 @@
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.news-page-container {
+    display: flex;
+    @include bp (mobile) {
+        flex-direction: column;
+    }
+
+    .text-content {
+        padding-right: 2em;
+
+        @include bp (mobile) {
+            margin-bottom: 2em;
+        }
+    }
+
+    .news-page-image {
+        @include bp (mobile) {
+            margin-bottom: 2em;
+        }
+    }
+
+    .news-page-image img {
+        display: block;
+        width: 33em;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+

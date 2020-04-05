@@ -1,0 +1,43 @@
+---
+layout: main
+pernalink: /
+---
+<div class="site-home-image">
+    <div class="homepage-title">
+        <h1>You Are What,<br> You Are Listening To</h1>
+    </div>
+    <div class="homepage-boxes">
+        <div class="homepage-content">
+            <h2>Latest Reviews:</h2>
+            <ul>
+            {% for category in site.categories %}
+                {%if category[0] == "reviews"  %}
+                    {% for post in category[1] limit:3 %}
+                    <li> <a href="{{site.baseurl}}{{post.url}}"> {{ post.title | truncate: 20 }} </a> </li>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="homepage-content">
+            <h2>Latest News:</h2>
+            <ul>
+                {% for category in site.categories %}
+                    {%if category[0] == "news"  %}
+                        {% for post in category[1] limit:3 %}
+                        <li> <a href="{{site.baseurl}}{{post.url}}"> {{ post.title | truncate: 20 }} </a> </li>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="homepage-content">
+            <h2>Events:</h2>
+            <ul>
+                <li> <a href="{{ site.baseurl }}/calendar"> {{ "Billy Eilish @Terminal 1 - 21:00" | truncate: 20 }} </a> </li>
+                <li> <a href="{{ site.baseurl }}/calendar"> {{ "Enrique Iglesias @Arena Armeec - 19:00" | truncate: 20 }}</a> </li>
+                <li> <a href="{{ site.baseurl }}/calendar"> {{ "Veselin Marinov @ploshtat Nezavisimost - 22:00" | truncate: 20 }}</a> </li>
+            </ul>
+        </div>
+    </div>
+</div>

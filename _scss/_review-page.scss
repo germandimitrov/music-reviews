@@ -1,0 +1,50 @@
+h2 {
+    text-align: center;
+    margin: 1em 0;
+}
+
+article.review-content {
+    display: flex;
+
+    @include bp(mobile) {
+        flex-direction: column;
+    }
+
+    .text-content {
+        padding: 0 2em;
+
+        blockquote {
+            color: #929292;
+            font-style: italic;
+            font-size: 1em;
+            margin: 3em 0 3em 0;
+            padding: 0 0 1.2em;
+            text-align: center;
+            clear: both;
+        }
+
+        @include bp(mobile) {
+            margin-bottom: 2em;
+        }
+    }
+
+    .container-image {
+        img {
+            display: block;
+            border-radius: 10px;
+            height: auto;
+            width: 30em;
+        }
+
+        @include bp(mobile) {
+            margin: 0 auto 2em auto;
+        }
+    }
+
+}
+
+h3 {
+    text-align: center;
+    margin: 2em 0;
+}
+

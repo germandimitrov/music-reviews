@@ -1,0 +1,18 @@
+body {
+    background-color: $background-color;
+}
+
+.container {
+    width: $container-width;
+    margin: 0 auto;
+    margin-top: 3em;
+
+    @include bp(mobile) {
+        width: auto;
+    }
+}
+
+.page {
+    min-height: $page-min-height;
+}
+

@@ -1,0 +1,117 @@
+.site-home-image {
+    background-image:
+    linear-gradient(0deg, rgba(167,172,169,0.22592787114845936) 0%, rgba(119,119,119,0.21192226890756305) 100%),
+    url('https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80');
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    height: 90vh;
+    color: $homepage-color;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    @include bp(mobile) {
+        height: auto;
+    }
+
+    .homepage-title {
+        margin-bottom: 4em;
+        h1 {
+            font-size: 4.3em;
+            text-align:  center;
+            color: #FFF;
+            text-shadow: 3px 3px #000;
+            opacity: 0.95;
+            animation: fadein 2.5s;
+            @include bp(mobile) {
+                font-size: 3.5em;
+            }
+
+        }
+    }
+
+    .homepage-boxes {
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    .homepage-content {
+        animation: fadein 2.5s;
+        display: inline-block;
+        border: 1px solid $homepage-color;
+        border-radius: 10px;
+        padding: 1em 5em;
+        margin: 0 1em;
+        background-color: rgba(0, 0, 0, 0.7);
+
+        @include bp(mobile) {
+            display: block;
+            margin: 1em 0;
+        }
+
+        ul {
+            list-style: none;
+            font-size: 1.5em;
+
+            & li {
+                animation: fadeInList 0.5s linear;
+                animation-fill-mode: both;
+            }
+
+            & li:nth-child(1) {
+                animation-delay: .45s;
+            }
+
+            & li:nth-child(2) {
+                animation-delay: .90s;
+            }
+
+            & li:nth-child(3) {
+                animation-delay: 1.20s;
+            }
+
+            li a {
+                text-decoration: none;
+                color: $homepage-color;
+            }
+        }
+    }
+
+    @include bp (mobile) {
+        background-position: center;
+        background-attachment: fixed;
+        height:100%;
+        width:100%;
+    }
+
+    @media screen and (max-height: 600px) {
+        height: auto;
+    }
+
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+
+@keyframes fadeInList {
+    0% {
+      opacity: 0;
+      top: 100px;
+    }
+    75% {
+      opacity: 0.5;
+      top: 0px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
